@@ -1,0 +1,341 @@
+@import "tailwindcss";
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background: whitesmoke;
+}
+:root {
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --main-padding: calc(1rem + 0.7vw);
+}
+
+@theme {
+  --color-primary: #c1e4c4;
+  --color-secondary: #c1dbe4;
+  --color-lightgrey: #e7e7e9;
+  --color-black: #050505;
+  --color-white: white;
+  --color-whiteSmoke: whitesmoke;
+  --color-transparent: transparent;
+  --color-darkGrey: #c7c7c7;
+
+  --padding-side: calc(1rem + 1.5vw);
+  --padding-main: calc(0.8rem + 1vw);
+  --margin-main: calc(0.8rem + 1vw);
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1000px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-3xl:1600px;
+}
+@media (min-width: 1000px) {
+  :root {
+    --padding-main: calc(4rem + 5vw);
+    --margin-main: calc(4rem + 5vw);
+  }
+}
+@layer {
+  .hamburger div {
+    @apply h-[3px] w-[calc(1rem+1vw)] bg-black m-[3px] rounded-2xl;
+  }
+  ul li {
+    @apply px-[calc(.9rem+.8vw)];
+  }
+  .img-div {
+    @apply absolute top-[10%] lg:top-[20%]  w-[80%]  sm:w-[calc(10rem+4vw)] lg:w-[calc(8rem+4vw)]  sm:shadow-2xl   py-[calc(1rem+2vw)] lg:py-[calc(.6rem+.6vw)] text-center rounded-[50px] lg:z-2;
+  }
+  .img-div h1 {
+    @apply block text-[clamp(1.8rem,2.7vw,5rem)] uppercase font-[350];
+  }
+  .img-div p {
+    @apply text-[clamp(1.1rem,1.1vw,4rem)] capitalize font-light;
+  }
+  .numbers {
+    @apply flex flex-col items-center w-full sm:w-[48%] lg:w-[33%] justify-center  px-[8%];
+  }
+  .numbers p:first-child {
+    @apply text-[clamp(5rem,7vw,10rem)] p-0 m-0  leading-tight;
+  }
+  .numbers p:last-child{
+    @apply text-[clamp(1.1rem,2vw,2.3rem)];
+  }
+
+  details summary {
+    @apply list-none;
+  }
+
+  .process p {
+    @apply py-[calc(.5rem+.5vw)];
+  }
+  .corousel div div {
+    @apply rounded-[50px];
+  }
+  .question{
+    @apply w-[85%] md:w-[65%] lg:w-[max(50%,calc(25rem+20vw))] px-[calc(1.7rem+1.7vw)] py-[calc(1.3rem+1.3vw)] rounded-[40px] bg-white shadow-2xl cursor-pointer relative hover:bg-whiteSmoke mt-[calc(.6rem+.6vw)] duration-100;
+  }
+  .question .showCase{
+    @apply text-[clamp(1.3rem,1.6vw,3.5rem)] capitalize;
+  }
+  .question .detail{
+    @apply text-[clamp(.95rem,1.1vw,2.5rem)] max-h-0 overflow-hidden duration-500;
+  }
+  .question .plus{
+    @apply w-[calc(.8rem+1vw)] lg:w-[calc(.8rem+.5vw)] relative ml-[calc(1rem+1vw)];
+  }
+  .question .plus div{
+    @apply absolute w-full h-[calc(.1rem+.05vw)] lg:h-[calc(.05rem+.05vw)] bg-black;
+  }
+  footer ul li{
+    @apply text-[clamp(1.3rem,1.6vw,2.6rem)] md:text-[clamp(1.1rem,1.15vw,3.5rem)] py-[calc(.6rem+.4vw)]  uppercase font-bold hover:scale-[1.1] duration-200 ;
+  }
+  footer ul li a{
+    @apply capitalize font-light;
+  }
+
+  footer ul{
+    @apply flex items-center w-fit  justify-center flex-col  my-[calc(.9rem+.7vw)] md:my-0 ;
+  }
+
+
+
+}
+.smooth {
+  transition: all 1s ease-in-out;
+}
+nav {
+  transition: opacity 0.3s ease-in-out;
+}
+nav ul.show {
+  top: 0;
+}
+
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  background: url("./src/images/cleaning-instruments.webp") no-repeat
+    center/cover;
+  transition: transform 0.6s ease;
+  z-index: 0;
+}
+
+.hero {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.37);
+  backdrop-filter: blur(10px) saturate(150%);
+  -webkit-backdrop-filter: blur(10px) saturate(150%);
+}
+.hero h1 {
+  transition: transform 0.3s ease-in-out;
+}
+.describe {
+  transition: transform 0.3s ease-in-out;
+}
+.details .summary {
+  font-size: clamp(1rem, 1.2vw, 2.8rem);
+  cursor: pointer;
+
+  width: max-content;
+}
+.details .content {
+  max-height: 0;
+  text-align: left;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+  font-size: clamp(0.9rem, 1.1vw, 2.5rem);
+}
+.details .summary p img {
+  margin-right: calc(0.5rem + 0.4vw);
+}
+
+.exit {
+  transition: transform 0.4s ease-out;
+}
+.reveal {
+  transition: transform 0.4s ease-out;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translate(0%, 200%);
+}
+
+nav ul li .exit {
+  transition: transform 0.3s ease-out;
+}
+nav ul li .reveal {
+  transition: transform 0.3s ease-out;
+  transform: translate(0%, 80%);
+}
+
+.arm {
+  border-radius: 50px;
+  background: url("./src/images/arm.webp") no-repeat center/cover;
+  transition: all 0.4s ease-in;
+}
+
+.img-div {
+  /* transform: translate(-50%, 0%); */
+  background: rgba(254, 254, 254, 0.436);
+  backdrop-filter: blur(9px) saturate(150%);
+}
+
+.img {
+  background: url("./src/images/pink-chair.webp") center/cover no-repeat;
+  position: relative;
+  inset: 0;
+  z-index: 0;
+}
+.img-2 {
+  background: url("./src/images/red-chair.webp") center/cover no-repeat;
+}
+
+.slide-in-l {
+  transform: translateX(-100%);
+
+  transition: all 1s ease;
+}
+.slide-in-l.visible {
+  transform: translateX(0%);
+}
+.slide-in-r {
+  transform: translateX(100%);
+
+  transition: all 1s ease;
+}
+.slide-in-r.visible {
+  transform: translateX(0%);
+}
+.line{
+  width: 0;
+  transition: .8s all ease-in-out;
+  animation-delay: 2s;
+  
+}
+.line.visible{
+  width:100%;
+}
+.slide-up {
+  transform: translateY(37%);
+  transition: all .5s ease;
+}
+.cleaning-occation .slide-up{
+    transform: translateY(20%);
+}
+.posts .slide-up{
+    transform: translateY(10%);
+  transition: all .3 s ease;
+}
+
+.posts button::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0%;
+  height: 0%;
+  background: #d2f9d5;
+  border-radius:  200% 200% 0% 0%; 
+  transform: translateY(100%) translateX(-50%);
+  transition:  width .4s linear, height .3s linear;
+  
+  z-index: 0; /* sits under text */
+}
+
+
+.posts button:hover::before {
+
+ transform: translateY(0%) translateX(-50%);
+height: 150%;
+width: 150%;
+}
+.slide-up.visible {
+  transform: translateY(0%);
+}
+.slide-out-l {
+  transform: translateX(100%);
+  transition: all .6s ease-in-out;
+}
+.slide-out-r {
+  transform: translateX(-100%);
+  transition: all .6s ease-in-out;
+}
+@media (max-width:900px){
+  .slide-out-l {
+  transform: translateX(50%);
+  transition: all .6s ease-in-out;
+}
+.slide-out-r {
+  transform: translateX(-50%);
+  transition: all .6s ease-in-out;
+}
+}
+.slide-out-l.visible {
+  transform: translateX(0%);
+}
+
+.slide-out-r.visible {
+  transform: translateX(0%);
+}
+
+.flip-over {
+  transform: rotateY(90deg);
+  transition: all 1s ease;
+
+}
+.flip-over.visible {
+  transform: rotateY(0);
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
+
+.whiteArrow.hovered {
+  animation: hover 1s ease-in-out forwards;
+}
+
+@keyframes hover {
+  0% {
+    left: calc(-2rem - 2vw);
+    bottom: calc(-2rem - 2vw);
+  }
+  100% {
+    left: 30%;
+    bottom: 30%;
+  }
+}
+
+footer .bg-img{
+  background: url("./src/images/blue-instrument.webp")  no-repeat ;
+  background-size: cover;
+  background-position: right; 
+  
+}
+.zoom-img {
+  transition: transform 0.3s ease-out, opacity .5s linear;
+}
+
+
+.corousel div:first-child{
+  margin-left: 0 ;
+}

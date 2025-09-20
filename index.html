@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+
+
+     <header id="home">
+        <nav class="flex items-center justify-between px-main pt-9 relative">
+          <a href="#home" class="z-20">
+            <img src="./src/images/logo.png" class=" w-full md:w-[calc(5.5rem+5vw)]" alt="logo image">
+          </a>
+          <ul class=" z-10 flex flex-col lg:flex-row justify-center lg:justify-start absolute lg:relative   w-full lg:w-fit h-screen lg:h-fit bg-darkGrey lg:bg-transparent text-black left-0 text-center text-[clamp(2rem,2.5vw,6rem)] lg:text-[clamp(1.1rem,1.2vw,4rem)] uppercase duration-300 top-[-100vh] lg:top-0 font-[350] lg:mr-10">
+            <li class="relative overflow-hidden"><a href="./index.html">
+              <p class="exit  w-full">home</p>
+            <p class="reveal  w-full">home</p>
+          </a>
+        </li>
+                <li class="relative overflow-hidden "><a href="./about.html">
+              <p class="exit  w-full">about</p>
+            <p class="reveal  w-full">about</p>
+          </a></li>
+            <li class="relative overflow-hidden "><a href="./services.html">
+              <p class="exit  w-full">servises</p>
+            <p class="reveal  w-full">servises</p>
+          </a></li>
+            <li class="relative overflow-hidden "><a href="./blog.html">
+              <p class="exit  w-full">blog</p>
+            <p class="reveal  w-full">blog</p>
+          </a></li>
+            <li class="relative overflow-hidden "><a href="./contact.html">
+              <p class="exit  w-full">contact</p>
+            <p class="reveal  w-full">contact</p>
+          </a></li>
+          </ul>
+          <div class="hamburger lg:hidden cursor-pointer z-20">
+            <div class=""></div>
+            <div class=""></div>
+            <div class=""></div>
+          </div>
+        </nav>
+            <section class="my-[calc(2.5rem+2vw)] flex items-center justify-center hero-bg 
+mx-[calc(1rem+1.5vw)] py-[calc(4rem+3.5vw)]  rounded-[70px] 
+overflow-hidden md:pb-[calc(8rem+7.5vw)] relative ">
+
+  <!-- background layer -->
+  <div class="hero-bg-img"></div>
+
+
+  <div class="hero rounded-[50px] px-[calc(1.2rem+1vw)] lg:px-[calc(3rem+2.3vw)] 
+  py-[calc(2rem+1vw)] w-[90%] max-w-[max(50%,calc(20rem+17vw))] text-center 
+  flex flex-col items-center justify-center relative ">
+
+    <p class="uppercase flex justify-center items-center text-[clamp(.7rem,1.1vw,2.4rem)]">
+      <img class="w-[calc(2rem+1.3vw)] md:w-[calc(1rem+1vw)]" src="./src/images/spray.svg" alt="">
+      go-to Cleaners
+    </p>
+
+    <h1 class="uppercase italic font-thin leading-tight text-[clamp(2.3rem,6vw,10rem)] mt-[calc(.8rem+.7vw)]">
+      <strong class="not-italic">Expert </strong>cleaning
+    </h1>
+
+    <p class="text-[clamp(1.1rem,1.2vw,2.5rem)] font-[350] mt-[calc(.8rem+0.5vw)] 
+    w-full sm:w-[90%] md:w-[100%] describe">
+      Creating cleaner, healthier spaces so you can focus on what matters most and relax on the weekends.
+    </p>
+
+    <a href="#explore" class="relative bg-white flip overflow-hidden uppercase cursor-pointer 
+    w-[min(90%,calc(8rem+8vw))] p-2 mt-[calc(.8rem+.8vw)] rounded-3xl 
+    text-[clamp(1rem,1.3vw,3rem)] font-[350]">
+      <p class="exit ">explore</p>
+      <p class="reveal w-full">explore</p>
+  </a>
+  </div>
+           </section>
+
+      </header>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
