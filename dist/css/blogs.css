@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@theme {
+  --color-primary: #c1e4c4;
+  --color-secondary: #c1dbe4;
+  --color-lightgrey: #e7e7e9;
+  --color-black: #050505;
+  --color-white: white;
+  --color-whiteSmoke: whitesmoke;
+  --color-transparent: transparent;
+  --color-darkGrey: #c7c7c7;
+
+  --padding-side: calc(1rem + 1.5vw);
+  --padding-main: calc(0.8rem + 1vw);
+  --margin-main: calc(0.8rem + 1vw);
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1000px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-3xl:1600px;
+}
+@layer {
+  form label {
+    @apply text-[clamp(1rem,1.1vw,2rem)] capitalize font-light py-[calc(.25rem+.1vw)];
+  }
+  form input, form textarea {
+    @apply bg-white border border-gray-200 rounded-[18px] px-[calc(1rem+.7vw)] py-[calc(.7rem+.4vw)] text-[clamp(.9rem,1vw,1.8rem)] mx-[calc(.3rem+.2vw)] mb-[calc(.6rem+.4vw)] sm:mx-0;
+  }
+  footer input{
+    @apply bg-transparent m-0 border-none;
+  }
+}
+.slide-y {
+  transform: translateY(30%);
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.5s ease;
+}
+.slide-y.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+.slide-x-left {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.5s ease;
+}
+.flip-y {
+  transform: rotateX(90deg);
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.4s ease;
+}
+.flip-y.visible {
+  transform: rotate(0);
+  opacity: 1;
+}
+.slide-x-right {
+  transform: translateX(30%);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 0.8s ease;
+}
+
+.slide-side-l {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.3s ease;
+}
+.slide-side-r {
+  transform: translateX(-60%);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.3s ease;
+}
+.slide-side-l.visible,
+.slide-side-r.visible {
+  transform: translateX(0%);
+  opacity: 1;
+}

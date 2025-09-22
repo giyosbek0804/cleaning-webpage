@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #c1e4c4;
+  --color-secondary: #c1dbe4;
+  --color-lightgrey: #e7e7e9;
+  --color-black: #050505;
+  --color-white: white;
+  --color-whiteSmoke: whitesmoke;
+  --color-transparent: transparent;
+  --color-darkGrey: #c7c7c7;
+
+  --padding-side: calc(1rem + 1.5vw);
+  --padding-main: calc(0.8rem + 1vw);
+  --margin-main: calc(0.8rem + 1vw);
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1000px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-3xl:1600px;
+}
+@layer{
+  .card{
+    @apply p-[calc(2rem+1vw)] my-[calc(1rem+.5vw)] rounded-3xl shadow-2xs  text-center flex flex-col items-center justify-center w-full sm:items-start sm:text-left sm:w-[calc(20rem+10vw)]   md:w-[48%] lg:w-[calc(9rem+11vw)] lg:mx-[calc(.2rem+.3vw)];
+  }
+.card h1{
+  @apply text-[clamp(1.4rem,1.5vw,5rem)] uppercase  my-[calc(.8rem+.6vw)] font-medium ;
+}
+.card p{
+  @apply uppercase tracking-widest text-[clamp(.85rem,1.2vw,3rem)] w-[95%] font-medium lg:text-[clamp(.85rem,1.05vw,2.5rem)];
+}
+.slide-y {
+  @apply transform translate-y-[30%] opacity-0 transition-all ease-out duration-700;
+}
+.slide-y.visible {
+  @apply translate-y-0 opacity-100;
+}
+
+}
+.corousel{
+    scrollbar-color: var(--color-secondary) transparent;
+  
+}
+.corousel::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+.flip-x {
+  transform: rotateY(90deg);
+  transition: all 1s ease;
+}
+.flip-x.visible {
+  transform: rotateY(0);
+}
+.scale-up{
+    transform: scale(.4);
+    transition: transform .8s ease;
+}
+.scale-down{
+    transform: scale(1.4);
+    transition: transform .8s ease, opacity 1s ease;
+    opacity: 0;
+}
+.scale-down.visible{
+    transform: scale(1);
+    opacity: 1;
+}
+
+.slide-inR{
+    transform: translateX(30%);
+    transition: transform 1s ease, opacity 1s ease;
+    opacity: 0;
+}
+.slide-inR.visible{
+    transform: translateX(0);
+    opacity: 1;
+}
