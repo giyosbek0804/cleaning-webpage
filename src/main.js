@@ -114,13 +114,13 @@ details.forEach(e => {
       let armImg = document.querySelector(".arm")
       if (text.includes("regular cleaning")) {
 
-        armImg.style.backgroundImage = "url('./src/images/arm.webp')";
+        armImg.style.backgroundImage = "url('/src/images/arm.webp')";
       } else if (text.includes("deep cleaning")) {
 
-        armImg.style.backgroundImage = "url('./src/images/red-instrument2.webp')";
+        armImg.style.backgroundImage = "url('/src/images/red-instrument2.webp')";
       } else if (text.includes("move in-out cleaning")) {
 
-        armImg.style.backgroundImage = "url('./src/images/purple-arm.webp')";
+        armImg.style.backgroundImage = "url('/src/images/purple-arm.webp')";
       }
     }
   })

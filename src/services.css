@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@theme {
+  --color-primary: #c1e4c4;
+  --color-secondary: #c1dbe4;
+  --color-lightgrey: #e7e7e9;
+  --color-black: #050505;
+  --color-white: white;
+  --color-whiteSmoke: whitesmoke;
+  --color-transparent: transparent;
+  --color-darkGrey: #c7c7c7;
+
+  --padding-side: calc(1rem + 1.5vw);
+  --padding-main: calc(0.8rem + 1vw);
+  --margin-main: calc(0.8rem + 1vw);
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1000px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-3xl:1600px;
+}
