@@ -122,7 +122,7 @@ nav ul.show {
 .hero-bg-img {
   position: absolute;
   inset: 0;
-  background: url("/public/images/cleaning-instruments.webp") no-repeat
+  background: url("/images/cleaning-instruments.webp") no-repeat
     center/cover;
   transition: transform 0.6s ease;
   z-index: 0;
@@ -179,7 +179,7 @@ nav ul li .reveal {
 
 .arm {
   border-radius: 50px;
-  background: url("/public/images/arm.webp") no-repeat center/cover;
+  background: url("/images/arm.webp") no-repeat center/cover;
   transition: all 0.4s ease-in;
 }
 
@@ -190,13 +190,13 @@ nav ul li .reveal {
 }
 
 .img {
-  background: url("/public/images/pink-chair.webp") center/cover no-repeat;
+  background: url("/images/pink-chair.webp") center/cover no-repeat;
   position: relative;
   inset: 0;
   z-index: 0;
 }
 .img-2 {
-  background: url("/public/images/red-chair.webp") center/cover no-repeat;
+  background: url("/images/red-chair.webp") center/cover no-repeat;
 }
 
 .slide-in-l {
@@ -327,7 +327,7 @@ width: 150%;
 }
 
 footer .bg-img{
-  background: url("/public/images/blue-instrument.webp")  no-repeat ;
+  background: url("/images/blue-instrument.webp")  no-repeat ;
   background-size: cover;
   background-position: right; 
   
