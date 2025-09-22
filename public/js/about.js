@@ -155,22 +155,22 @@ function corouselPush(img, name, jobPosition, text) {
             <p class="text-[clamp(1.05rem,1.1vw,3rem)] w-[80%] tracking-wide first-letter:uppercase">${name.split(" ")[0] + text} </p>
                 <p class="flex items-center justify-center w-full py-[calc(.8rem+.8vw)] ">
       <a href="https://www.youtube.com/" class="px-[calc(.3rem+.2vw)] ">
-        <img  loading="lazy" class="h-auto w-[calc(1.4rem+1vw)]   md:w-[calc(1rem+.5vw)] 3xl:w-[calc(1.7rem+1vw)] " src="./src/images/youtube.png" alt="youtube">
+        <img  loading="lazy" class="h-auto w-[calc(1.4rem+1vw)]   md:w-[calc(1rem+.5vw)] 3xl:w-[calc(1.7rem+1vw)] " src="../images/youtube.png" alt="youtube">
       </a >
       <a href="https://www.instagram.com/" class="px-[calc(.3rem+.2vw)] ">
-        <img loading="lazy" class="h-auto w-[calc(1.4rem+1vw)]  md:w-[calc(1rem+.5vw)] 3xl:w-[calc(1.7rem+1vw)] "  src="./src/images/insta.png" alt="instagram">
+        <img loading="lazy" class="h-auto w-[calc(1.4rem+1vw)]  md:w-[calc(1rem+.5vw)] 3xl:w-[calc(1.7rem+1vw)] "  src="../images/insta.png" alt="instagram">
       </a>
       <a href="https://www.tiktok.com/" class="px-[calc(.3rem+.2vw)] ">
-        <img  loading="lazy" class="h-auto w-[calc(1.4rem+1vw)]  md:w-[calc(1rem+.5vw)] 3xl:w-[calc(1.7rem+1vw)] cursor-pointer"  src="./src/images/tictok.png" alt="tiktok">
+        <img  loading="lazy" class="h-auto w-[calc(1.4rem+1vw)]  md:w-[calc(1rem+.5vw)] 3xl:w-[calc(1.7rem+1vw)] cursor-pointer"  src="../images/tictok.png" alt="tiktok">
       </a>
     </p>
           </div>
     `
 }
-corouselPush("./src/images/cleaner1.webp", "amy lee", "Cleaning Specialist", " ensures every space is spotless and clean.")
-corouselPush("./src/images/cleaner1.webp", "amy lee", "Cleaning Specialist", " ensures every space is spotless and clean.")
-corouselPush("./src/images/cleaner1.webp", "amy lee", "Cleaning Specialist", " ensures every space is spotless and clean.")
-corouselPush("./src/images/cleaner1.webp", "amy lee", "Cleaning Specialist", " ensures every space is spotless and clean.")
+corouselPush("../images/cleaner1.webp", "amy lee", "Cleaning Specialist", " ensures every space is spotless and clean.")
+corouselPush("../images/cleaner1.webp", "amy lee", "Cleaning Specialist", " ensures every space is spotless and clean.")
+corouselPush("../images/cleaner1.webp", "amy lee", "Cleaning Specialist", " ensures every space is spotless and clean.")
+corouselPush("../images/cleaner1.webp", "amy lee", "Cleaning Specialist", " ensures every space is spotless and clean.")
 
 let corousel = document.querySelector(".corousel");
 corousel.innerHTML = corouselHtml;

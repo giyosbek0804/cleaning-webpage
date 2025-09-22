@@ -4,18 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="cleaning webpage clone of webflow" />
-    <link rel="shortcut icon" href="./src/images/tab-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/tab-logo.png" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./src/about.css">
+<link rel="stylesheet" href="../css/about.css">
 
 <!-- download img for better LCP -->
- <link rel="preload" fetchpriority="high" as="image" href="./src/images/yellow-instrument.webp" type="image/webp">
+ <link rel="preload" fetchpriority="high" as="image" href="../images/yellow-instrument.webp" type="image/webp">
    
- <script src="./src/about.js" defer></script>
- <script src="./src/main.js"></script>
+ <script src="../js/about.js" defer></script>
+ <script src="/my-project/src/main.js"></script>
 
     <title>About Us | Webflow Copy</title>
   </head>
@@ -24,10 +24,10 @@
       <header id="home">
         <nav class="flex items-center justify-between px-main pt-9 relative">
           <a href="./index.html" class="z-20">
-            <img src="./src/images/logo.png" class=" w-full md:w-[calc(5.5rem+5vw)]" alt="logo image">
+            <img src="../images/logo.png" class=" w-full md:w-[calc(5.5rem+5vw)]" alt="logo image">
           </a>
           <ul class=" z-10 flex flex-col lg:flex-row justify-center lg:justify-start absolute lg:relative   w-full lg:w-fit h-screen lg:h-fit bg-darkGrey lg:bg-transparent text-black left-0 text-center text-[clamp(2rem,2.5vw,6rem)] lg:text-[clamp(1.1rem,1.2vw,4rem)] uppercase duration-300 top-[-100vh] lg:top-0 font-[350] lg:mr-10">
-            <li class="relative overflow-hidden"><a href="./index.html">
+            <li class="relative overflow-hidden"><a href="/my-project/index.html">
               <p class="exit  w-full">home</p>
             <p class="reveal  w-full">home</p>
           </a></li>
@@ -93,7 +93,7 @@ overflow-hidden  relative">
 <section id="explore" class="px-[10%] lg:px-[15%]">
   <div class="overflow-hidden rounded-[50px] slide-y ">
   
-    <img class="zoom-img w-full h-full object-cover" fetchpriority="high" src="./src/images/yellow-instrument.webp" alt="">
+    <img class="zoom-img w-full h-full object-cover" fetchpriority="high" src="../images/yellow-instrument.webp" alt="yellow-instrument">
   </div>
 </section>
 
@@ -145,22 +145,22 @@ overflow-hidden  relative">
 <!-- cards -->
 <div class=" px-[10%]  flex flex-col items-center justify-center mt-[calc(3rem+2vw)] md:flex-row md:items-stretch flex-wrap md:justify-between lg:justify-center lg:px-[3%]">
 <div class="card bg-white  slide-y">
-  <img class="w-[calc(3rem+2vw)] h-auto" src="./src/images/light-pot.svg" alt="purifier">
+  <img class="w-[calc(3rem+2vw)] h-auto" src="../images/light-pot.svg" alt="purifier">
   <h1>quality</h1>
   <p >every space is spotless and well-maintained.</p>
 </div>
 <div class="card bg-darkGrey slide-y delay-200">
-  <img class="w-[calc(3rem+2vw)] h-auto" src="./src/images/heart-home.svg" alt="home">
+  <img class="w-[calc(3rem+2vw)] h-auto" src="../images/heart-home.svg" alt="home">
   <h1>REfresh</h1>
   <p >every room feeling fresh and rejuvenated.</p>
 </div>
 <div class="card bg-primary slide-y delay-350">
-  <img class="w-[calc(3rem+2vw)] h-auto" src="./src/images/soap.svg" alt="soap">
+  <img class="w-[calc(3rem+2vw)] h-auto" src="../images/soap.svg" alt="soap">
   <h1>Sanitize</h1>
   <p >top-grade sanitization techniques.</p>
 </div>
 <div class="card bg-secondary slide-y delay-500">
-  <img class="w-[calc(3rem+2vw)] h-auto" src="./src/images/tick-badge-light.svg" alt="purifier">
+  <img class="w-[calc(3rem+2vw)] h-auto" src="../images/tick-badge-light.svg" alt="purifier">
   <h1>Awards</h1>
   <p >accolades that highlight our service.</p>
 </div>
@@ -186,24 +186,24 @@ Find out how affordable clean can be — Request your free quote today!
     </p>
       <form class="bg-black px-[calc(1.5rem+1.5vw)] sm:px-[calc(1rem+1vw)] py-[calc(1rem+1vw)] sm:py-[calc(.5rem+.4vw)] md:py-[calc(.3rem+.3vw)] flex flex-wrap sm:flex-nowrap items-center justify-center rounded-2xl w-[94%] sm:w-[calc(17rem+14vw)] mt-[calc(2rem+2vw)] duration-500">
         <input type="email" required placeholder="Enter your email" class="text-whiteSmoke text-center sm:text-left text-[clamp(.9rem,1rem,4.5rem)] 3xl:text-[clamp(1.2rem,1.8rem,4rem)] w-full outline-none  sm:px-[calc(.5rem+.5vw)] duration-500 ">
-        <button type="submit" class="bg-primary px-[calc(1.3rem+1.3vw)] md:px-[calc(.8rem+.8vw)] py-[calc(.5rem+.5vw)] md:py-[calc(.3rem+.3vw)] text-[clamp(1rem,1.3vw,3.1rem)] rounded-[10px] mt-[calc(1rem+1vw)] sm:mt-0 duration-500"> --></button>
+        <button type="submit" class="bg-primary px-[calc(1.3rem+1.3vw)] md:px-[calc(.8rem+.8vw)] py-[calc(.5rem+.5vw)] cursor-pointer md:py-[calc(.3rem+.3vw)] text-[clamp(1rem,1.3vw,3.1rem)] rounded-[10px] mt-[calc(1rem+1vw)] sm:mt-0 duration-500"> &rarr;</button>
       </form>
         </div>
         <div class="w-full " >
 <div class="flex flex-col md:flex-row items-center md:items-start justify-between  w-full mt-[calc(4rem+2vw)] mb-[calc(1.5rem+1vw)] lg:px-[5%]  slide-x">
   <div class="flex flex-col items-center md:items-start  md:w-[30%] slide-y">
     <a href="#home">
-      <img loading="lazy"  class="w-[calc(9rem+9vw)] md:w-[calc(5rem+5vw)] 3xl:w-[calc(10rem+6vw)] h-auto slide-up" src="./src/images/logo.png" alt="logo">
+      <img loading="lazy"  class="w-[calc(9rem+9vw)] md:w-[calc(5rem+5vw)] 3xl:w-[calc(10rem+6vw)] h-auto slide-up" src="../images/logo.png" alt="logo">
     </a>
     <div class="flex items-center justify-center w-full py-[calc(.8rem+.8vw)] md:justify-start slide-up">
       <a href="https://www.youtube.com/" class="px-[calc(.3rem+.2vw)] ">
-        <img loading="lazy"  class="h-auto w-[calc(1.6rem+1vw)] md:w-[calc(1rem+.5vw)] 3xl:w-[calc(1.7rem+1vw)] " src="./src/images/youtube.png" alt="youtube">
+        <img loading="lazy"  class="h-auto w-[calc(1.6rem+1vw)] md:w-[calc(1rem+.5vw)] 3xl:w-[calc(1.7rem+1vw)] " src="../images/youtube.png" alt="youtube">
       </a>
       <a href="https://www.instagram.com/"  class="px-[calc(.3rem+.2vw)] ">
-        <img loading="lazy"  class="h-auto w-[calc(1.6rem+1vw)]  md:w-[calc(1rem+.5vw)] 3xl:w-[calc(1.7rem+1vw)] "  src="./src/images/insta.png" alt="instagram">
+        <img loading="lazy"  class="h-auto w-[calc(1.6rem+1vw)]  md:w-[calc(1rem+.5vw)] 3xl:w-[calc(1.7rem+1vw)] "  src="../images/insta.png" alt="instagram">
       </a>
       <a href="https://www.tiktok.com/" class="px-[calc(.3rem+.2vw)] ">
-        <img  loading="lazy" class="h-auto w-[calc(1.6rem+1vw)] md:w-[calc(1rem+.5vw)] 3xl:w-[calc(1.7rem+1vw)] cursor-pointer"  src="./src/images/tictok.png" alt="tiktok">
+        <img  loading="lazy" class="h-auto w-[calc(1.6rem+1vw)] md:w-[calc(1rem+.5vw)] 3xl:w-[calc(1.7rem+1vw)] cursor-pointer"  src="../images/tictok.png" alt="tiktok">
       </a>
     </div>
     <p class="text-[clamp(1.4rem,1.6vw,3rem)] md:text-[clamp(1.2rem,1.3vw,3.5rem)] text-center md:text-left w-[70%] font-light md:w-[20ch] slide-up">
@@ -213,7 +213,7 @@ Find out how affordable clean can be — Request your free quote today!
   <div class="flex flex-col md:flex-row md:justify-between items-center md:items-start   md:w-[70%] lg:w-[60%]  ">
     <ul class="slide-y">
       <li class="font-bold">main</li>
-      <li><a href="./index.html">home</a></li>
+      <li><a href="/my-project/index.html">home</a></li>
       <li><a href="./about.html">about</a></li>
       <li><a href="./services.html">services</a></li>
       <li><a href="./blog.html">blog</a></li>
@@ -233,6 +233,7 @@ Find out how affordable clean can be — Request your free quote today!
       <li><a href="#">changelog</a></li>
     </ul>
   </div>
+
 
 </div>
 <hr class="line  m-auto ">
