@@ -105,7 +105,12 @@ body {
   footer ul{
     @apply flex items-center w-fit  justify-center flex-col  my-[calc(.9rem+.7vw)] md:my-0 ;
   }
-
+  .form label {
+    @apply text-[clamp(1rem,1.1vw,2rem)] capitalize font-light py-[calc(.25rem+.1vw)];
+  }
+  .form input, .form textarea {
+    @apply bg-white border border-gray-200 rounded-[18px] px-[calc(1rem+.7vw)] py-[calc(.7rem+.4vw)] text-[clamp(.9rem,1vw,1.8rem)] mx-[calc(.3rem+.2vw)] mb-[calc(.6rem+.4vw)] sm:mx-0;
+  }
 
 
 }

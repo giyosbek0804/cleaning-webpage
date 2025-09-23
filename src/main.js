@@ -97,6 +97,18 @@ const observer = new IntersectionObserver((entries) => {
 [...slideInL, ...slideInR, ...flipOver, ...fadeIn, ...trigger, ...slideUp, ...slideOutL, ...slideOutR, ...line].forEach(el => observer.observe(el));
 
 
+const armImages = [
+  "/images/arm.webp",
+  "/images/red-instrument2.webp",
+  "/images/purple-arm.webp"
+];
+
+const preloadedArms = armImages.map(src => {
+  const img = new Image();
+  img.src = src;
+  return img;
+});
+
 
 let details = document.querySelectorAll(".details");
 details.forEach(e => {
@@ -106,24 +118,23 @@ details.forEach(e => {
   summary.addEventListener("click", () => {
     if (content.style.maxHeight) {
       content.style.maxHeight = null;
-    }
-    else {
-      document.querySelectorAll(".content").forEach(c => c.style.maxHeight = null)
+    } else {
+      document.querySelectorAll(".content").forEach(c => c.style.maxHeight = null);
       content.style.maxHeight = content.scrollHeight + "px";
+
       const text = summary.textContent.toLowerCase();
-      let armImg = document.querySelector(".arm")
+      let armImg = document.querySelector(".arm");
+
       if (text.includes("regular cleaning")) {
-
-        armImg.style.backgroundImage = "url('/images/arm.webp')";
+        armImg.style.backgroundImage = `url('${preloadedArms[0].src}')`;
       } else if (text.includes("deep cleaning")) {
-
-        armImg.style.backgroundImage = "url('/images/red-instrument2.webp')";
+        armImg.style.backgroundImage = `url('${preloadedArms[1].src}')`;
       } else if (text.includes("move in-out cleaning")) {
-
-        armImg.style.backgroundImage = "url('/images/purple-arm.webp')";
+        armImg.style.backgroundImage = `url('${preloadedArms[2].src}')`;
       }
     }
-  })
+  });
+
   window.addEventListener("click", (e) => {
     if (!summary.contains(e.target) && !content.contains(e.target)) {
       content.style.maxHeight = null;
