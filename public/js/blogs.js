@@ -1,15 +1,22 @@
 let nav = document.querySelector("nav");
-let ul = nav.querySelector("ul");
+let ul = nav.querySelectorAll("ul");
 let hamburger = nav.querySelector(".hamburger");
 
 hamburger.addEventListener("click", () => {
-    ul.classList.toggle("show");
-    if (ul.classList.contains("show")) {
-        document.querySelector("body").style.overflow = "hidden"
-    }
-    else {
-        document.querySelector("body").style.overflow = "visible"
-    }
+    ul.forEach(ul => {
+
+        // ul.classList.toggle("show")
+        console.log(ul);
+
+        if (ul.classList.contains("show")) {
+            document.querySelector("body").style.overflow = "hidden";
+            ul.classList.add("show");
+        }
+        else {
+            document.querySelector("body").style.overflow = "visible"
+            ul.classList.remove("show");
+        }
+    })
 })
 
 
