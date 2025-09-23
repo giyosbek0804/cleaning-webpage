@@ -1,15 +1,22 @@
 let nav = document.querySelector("nav");
-let ul = nav.querySelector("ul");
+let ul = nav.querySelectorAll("ul");
 let hamburger = nav.querySelector(".hamburger");
 
 hamburger.addEventListener("click", () => {
-    ul.classList.toggle("show");
-    if (ul.classList.contains("show")) {
-        document.querySelector("body").style.overflow = "hidden"
-    }
-    else {
-        document.querySelector("body").style.overflow = "visible"
-    }
+    ul.forEach(ul => {
+        
+        // ul.classList.toggle("show")
+        console.log(ul);
+        
+        if (ul.classList.contains("show")) {
+            document.querySelector("body").style.overflow = "hidden";
+            ul.classList.add("show");
+        }
+        else {
+            document.querySelector("body").style.overflow = "visible"
+            ul.classList.remove("show");
+        }
+    })
 })
 // img scale and fade in animation js part ; 2nd section
 window.addEventListener("scroll", () => {
@@ -168,9 +175,9 @@ function corouselPush(img, name, jobPosition, text) {
     `
 }
 corouselPush("../images/cleaner1.webp", "amy lee", "Cleaning Specialist", " ensures every space is spotless and clean.")
-corouselPush("../images/cleaner1.webp", "amy lee", "Cleaning Specialist", " ensures every space is spotless and clean.")
-corouselPush("../images/cleaner1.webp", "amy lee", "Cleaning Specialist", " ensures every space is spotless and clean.")
-corouselPush("../images/cleaner1.webp", "amy lee", "Cleaning Specialist", " ensures every space is spotless and clean.")
+corouselPush("../images/cleaner2.webp", "eva kim", "Sanitation Technician", " provides top-notch disinfection services.")
+corouselPush("../images/cleaner3.webp", "Ana Cole", "Residential CleaneR", " is known for her meticulous cleaning.")
+corouselPush("../images/cleaner4.webp", "Lily Ray", "Quality Inspector", " oversees highest quality control.")
 
 let corousel = document.querySelector(".corousel");
 corousel.innerHTML = corouselHtml;

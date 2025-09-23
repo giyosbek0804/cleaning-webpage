@@ -13,7 +13,26 @@ function rearrange() {
 }
 rearrange();
 window.addEventListener("resize", rearrange);
+let nav = document.querySelector("nav");
+let ul = nav.querySelectorAll("ul");
+let hamburger = nav.querySelector(".hamburger");
 
+hamburger.addEventListener("click", () => {
+    ul.forEach(ul => {
+
+        // ul.classList.toggle("show")
+        console.log(ul);
+
+        if (ul.classList.contains("show")) {
+            document.querySelector("body").style.overflow = "hidden";
+            ul.classList.add("show");
+        }
+        else {
+            document.querySelector("body").style.overflow = "visible"
+            ul.classList.remove("show");
+        }
+    })
+})
 
 const armImages = [
     "/images/arm.webp",
