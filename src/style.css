@@ -112,7 +112,21 @@ body {
     @apply bg-white border border-gray-200 rounded-[18px] px-[calc(1rem+.7vw)] py-[calc(.7rem+.4vw)] text-[clamp(.9rem,1vw,1.8rem)] mx-[calc(.3rem+.2vw)] mb-[calc(.6rem+.4vw)] sm:mx-0;
   }
 
-
+  .card{
+    @apply p-[calc(2rem+1vw)] my-[calc(1rem+.5vw)] rounded-3xl shadow-2xs  text-center flex flex-col items-center justify-center w-full sm:items-start sm:text-left sm:w-[calc(20rem+10vw)]   md:w-[48%] lg:w-[calc(9rem+11vw)] lg:mx-[calc(.2rem+.3vw)];
+  }
+.card h1{
+  @apply text-[clamp(1.4rem,1.5vw,5rem)] uppercase  my-[calc(.8rem+.6vw)] font-medium ;
+}
+.card p{
+  @apply uppercase tracking-widest text-[clamp(.85rem,1.2vw,3rem)] w-[95%] font-medium lg:text-[clamp(.85rem,1.05vw,2.5rem)];
+}
+.slide-y {
+  @apply transform translate-y-[30%] opacity-0 transition-all ease-out duration-700;
+}
+.slide-y.visible {
+  @apply translate-y-0 opacity-100;
+}
 }
 .smooth {
   transition: all 1s ease-in-out;
